@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Utilisateur
- * Date: 06/03/2019
- * Time: 11:59
- */
+require __DIR__ . "/../vendor/autoload.php";
+use \Core\Request;
+
+$request = Request::createFromGlobals();
+
+var_dump($request);
+
+die();
