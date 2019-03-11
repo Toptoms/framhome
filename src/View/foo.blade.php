@@ -1,7 +1,9 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Utilisateur
- * Date: 08/03/2019
- * Time: 10:30
- */
+<!doctype html>
+<html lang="fr">
+<head>
+    <title>MyFramework</title>
+</head>
+<body>
+<p>Hello world !</p>
+</body>
+</html>

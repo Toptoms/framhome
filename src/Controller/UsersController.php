@@ -2,7 +2,8 @@
 
 namespace App\Controller;
 
-use Core\AuthConponement;
+use Core\AuthComponent;
+
 
 class UsersController extends AppController
 
@@ -10,20 +11,39 @@ class UsersController extends AppController
 
     public function index()
     {
-        AuthComponent::
-
-        if (session() == false) { // si la session n'existe pas header("Location : /login.php"); // redirection vers la page login }
-
-return this ->
+        if (AuthComponent::checkAuthenticated()  ) {
+            $this->render("index");
+        } else {
+            $this->redirect("login");
+        }
     }
 
+    /**
+     * @throws \Exception
+     */
     public function login()
-    {
 
+    {
+        $mail = 'le-campus-numerique@in-the-alps.fr';
+        $pass = '123';
+
+        if (!empty($_POST)) {
+            if ($_POST['mail'] === $mail && $_POST['pass'] === $pass) {
+                AuthComponent::create();
+                $this->redirect('index');
+            }
+        }
+         $this->render('login');
     }
 
+
+    /**
+     * @throws \Exception
+     */
     public function logout()
     {
+        AuthComponent::delete();
+        $this->redirect('login');
 
     }
 

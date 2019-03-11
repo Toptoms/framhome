@@ -1,3 +1,4 @@
+<?php /* C:\projets\framehome\src\View/bar.blade.php */ ?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -5,6 +6,6 @@
 </head>
 <body>
 
-<p>{{ $bar  }}</p>
+<p><?php echo e($bar); ?></p>
 </body>
 </html>

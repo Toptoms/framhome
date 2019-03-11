@@ -1,3 +1,4 @@
+<?php /* C:\projets\framehome\src\View/login.blade.php */ ?>
 <html>
 <body>
 <form method="post" action="/login">
